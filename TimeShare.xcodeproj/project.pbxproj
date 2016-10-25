@@ -13,6 +13,7 @@
 		BA4384851DBEF08E003CC60D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4384841DBEF08E003CC60D /* MessagesViewController.swift */; };
 		BA4384881DBEF08E003CC60D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4384861DBEF08E003CC60D /* MainInterface.storyboard */; };
 		BA43848A1DBEF08E003CC60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4384891DBEF08E003CC60D /* Assets.xcassets */; };
+		BA4384961DBFFC1F003CC60D /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4384951DBFFC1F003CC60D /* EventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BA4384871DBEF08E003CC60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		BA4384891DBEF08E003CC60D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA43848B1DBEF08E003CC60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4384951DBFFC1F003CC60D /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				BA4384841DBEF08E003CC60D /* MessagesViewController.swift */,
 				BA4384861DBEF08E003CC60D /* MainInterface.storyboard */,
+				BA4384951DBFFC1F003CC60D /* EventViewController.swift */,
 				BA4384891DBEF08E003CC60D /* Assets.xcassets */,
 				BA43848B1DBEF08E003CC60D /* Info.plist */,
 			);
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4384851DBEF08E003CC60D /* MessagesViewController.swift in Sources */,
+				BA4384961DBFFC1F003CC60D /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				BA4384901DBEF08E003CC60D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA4384921DBEF08E003CC60D /* Build configuration list for PBXNativeTarget "TimeShare" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				BA4384941DBEF08E003CC60D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

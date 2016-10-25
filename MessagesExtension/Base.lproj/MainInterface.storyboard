@@ -28,6 +28,9 @@
                                     <constraint firstAttribute="height" constant="44" id="zkj-8Z-k0P"/>
                                 </constraints>
                                 <state key="normal" title="Create New Event"/>
+                                <connections>
+                                    <action selector="createNewEvent:" destination="ObA-dk-sSI" eventType="touchUpInside" id="7da-YX-HzB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,10 +45,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Event View Controller-->
         <scene sceneID="ObI-ud-I4d">
             <objects>
-                <viewController storyboardIdentifier="Create Event" id="PXr-e6-Cfm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Create Event" id="PXr-e6-Cfm" customClass="EventViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aPR-YZ-zmk"/>
                         <viewControllerLayoutGuide type="bottom" id="UC5-OE-j2S"/>
@@ -76,6 +79,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PXr-e6-Cfm" id="dE2-Cb-2Da"/>
+                                    <outlet property="delegate" destination="PXr-e6-Cfm" id="F2c-mX-GLw"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EU9-NU-oTR">
                                 <rect key="frame" x="0.0" y="207" width="375" height="256"/>
@@ -102,6 +109,9 @@
                                             <constraint firstAttribute="height" constant="44" id="d6R-ZI-rZB"/>
                                         </constraints>
                                         <state key="normal" title="Add Date"/>
+                                        <connections>
+                                            <action selector="addDate:" destination="PXr-e6-Cfm" eventType="touchUpInside" id="59N-jG-uNb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFK-Ee-BR1">
                                         <rect key="frame" x="104" y="0.0" width="34" height="44"/>
@@ -109,6 +119,9 @@
                                             <constraint firstAttribute="height" constant="44" id="jsi-IL-qny"/>
                                         </constraints>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveSelectedDates:" destination="PXr-e6-Cfm" eventType="touchUpInside" id="0Kv-tN-3O1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -129,15 +142,19 @@
                             <constraint firstItem="gS1-UY-9eU" firstAttribute="top" secondItem="EU9-NU-oTR" secondAttribute="bottom" id="sDa-O0-ZXm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="cQv-Cs-aKV" id="AKm-Oe-eli"/>
+                        <outlet property="tableView" destination="CsB-1a-SLb" id="Z3n-av-ZKC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhQ-VH-95p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="203"/>
+            <point key="canvasLocation" x="670" y="100"/>
         </scene>
-        <!--View Controller-->
+        <!--Event View Controller-->
         <scene sceneID="A6o-uy-vMQ">
             <objects>
-                <viewController storyboardIdentifier="SelectDates" id="Hb3-RC-FCO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectDates" id="Hb3-RC-FCO" customClass="EventViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PoX-EI-2aT"/>
                         <viewControllerLayoutGuide type="bottom" id="lBx-0i-zkg"/>
@@ -175,6 +192,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hb3-RC-FCO" id="GC3-Im-CS1"/>
+                                    <outlet property="delegate" destination="Hb3-RC-FCO" id="Y4L-22-mtE"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM2-Oq-jMz">
                                 <rect key="frame" x="165" y="623" width="44" height="44"/>
@@ -184,6 +205,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveSelectedDates:" destination="Hb3-RC-FCO" eventType="touchUpInside" id="2eP-4w-UGf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -196,10 +220,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="LM6-LX-cYb" secondAttribute="trailing" id="wgJ-Lv-TEg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="LM6-LX-cYb" id="7yF-zB-3tL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbY-tO-bvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="203"/>
+            <point key="canvasLocation" x="1327" y="99"/>
         </scene>
     </scenes>
 </document>
