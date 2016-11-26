@@ -1,4 +1,4 @@
-# TimeShare
+# Practical iOS 10: TimeShare
 Practical iOS 10 project #2 - TimeShare
 
 2016, Swift 3.0.1
